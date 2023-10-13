@@ -13,7 +13,7 @@ const goBackScript = document.createElement("script");
 
 goBackScript.innerHTML = `function goBack() { history.back()}`;
 
-const isBackMyPage = document.referrer.split(/\//)[2] === "127.0.0.1:5500";
+const isBackMyPage = document.referrer.split(/\//)[2] === window.location.host;
 
 const showBack = isBackMyPage && bare_path !== "index/";
 
